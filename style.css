@@ -24,7 +24,11 @@ label{
   box-shadow: inset 0px 5px 15px rgba(0,0,0,0.3), inset 0px -5px 15px rgba(255,255,255,0.3);
 }
 label:after{
-  content: '';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 130px;
+  content: '🌝';
   position: absolute;
   height: 160px;
   width: 160px;
@@ -36,6 +40,8 @@ label:after{
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 input:checked ~ label:after{
+  content:'🌚';
+  font-size:130px;
   left: 470px;
   transform: translateX(-100%);
   background: linear-gradient(180deg,#777,#3a3a3a);
@@ -58,4 +64,43 @@ input:checked + label + .background{
 }
 input{
   display: none;
+}
+@media (max-width:600px) {
+  label{
+ 
+    width: 230px;
+    height: 80px;
+   
+  }
+  label:after{
+    height: 65px;
+    width: 65px;
+    top:7px;
+    font-size: 50px;
+  }
+  input:checked ~ label:after{
+    left: 220px;
+    font-size: 50px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg,#777,#3a3a3a);
+  }
+}
+@media (max-width:300px) {
+  label{
+ 
+    width: 180px;
+    height: 80px;
+   
+  }
+  label:after{
+    height: 65px;
+    width: 65px;
+    top:7px;
+   
+  }
+  input:checked ~ label:after{
+    left: 170px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg,#777,#3a3a3a);
+  }
 }
