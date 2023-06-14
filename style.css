@@ -100,7 +100,6 @@ input{
   }
   input:checked ~ label:after{
     left: 170px;
-    transform: translateX(-100%);
-    background: linear-gradient(180deg,#777,#3a3a3a);
+   
   }
 }
